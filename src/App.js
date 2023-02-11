@@ -1,18 +1,21 @@
-import logo from '../logo.svg';
-import '../App.css';
+import logo from './logo.svg';
+import './App.css';
 import Login from './pages/Login.js';
 import Home from './pages/Home.js';
 import Register from './pages/Register.js';
-import { Route, Routes } from 'react-router-dom';
+import WritePost from './pages/WritePost.js';
+import { Route, Routes, Link, Navigate , Router} from 'react-router-dom';
+import ProtectedRoutes from './ProtectedRoutes';
 
 
 function App() {
-  
+
   return (
      <Routes>
-      <Route path = '/' element = {<Home />}></Route>
-      <Route path = 'login' element = {<Login />}></Route>
-      <Route path = 'register' element = {<Register />}></Route>
+      <Route path = '/' element = {<ProtectedRoutes><Home /></ProtectedRoutes>}/>
+      <Route path = 'login' element = {<Login />}/>
+      <Route path = 'register' element = {<Register />}/>
+      <Route path = 'write-post' element = {<WritePost />}/>
      </Routes>
   );
 }
