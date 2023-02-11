@@ -23,6 +23,37 @@
   height: 50px;
   width:max;
 }
+.post{
+  background-color: #999288;
+  width:60%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  border-radius: 4px;
+  border-color: #6b6055;
+  border-style: solid;
+  border-width: 2px;
+  margin-bottom: 15px;
+  
+}
+.post-title{
+  font-size:40px;
+  align-self: flex-start;
+  padding-left: 10px;
+}
+.post-description{
+  font-size:30px;
+}
+.post-likes{
+  font-size:25px;
+  align-self: flex-start;
+  padding-left: 10px;
+}
+.like{
+  width:20px;
+  height:20px;
+  filter: brightness(0.5);
+}
 .Email-input{
   width:210px;
 }
@@ -34,6 +65,15 @@
   border:#33312e;
   border-radius:4px;
 }
+.button{
+  background-color: #33312e;
+  color:white;
+  width:100px;
+  min-height:30px;
+  border:#33312e;
+  border-radius:4px;
+  margin-bottom: 20px;
+}
 .App-header {
   background-color: #ddd1be;
   min-height: 100vh;
@@ -44,7 +84,22 @@
   font-size: calc(10px + 2vmin);
   color: rgb(78, 66, 66);
 }
-
+.form{
+  display: flex;
+  flex-direction: column;
+  align-content: flex-end;
+  justify-content: center;
+}
+.input-container{
+  align-self: flex-end;
+}
+.input-container-big{
+  align-self: flex-end;
+  overflow-x: hidden;
+  padding:0 0 70px 5px;
+  width: fit-content;
+  block-size: fit-content;
+}
 .App-link {
   color: #61dafb;
 }
